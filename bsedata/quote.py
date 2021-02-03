@@ -83,6 +83,9 @@ def quote(scripCode):
             elif td['id'] == 'td52WHL':
                 res['52weekHigh'] = td.string.split("/")[0].strip()
                 res['52weekLow'] = td.string.split("/")[1].strip()
+            elif td['id'] == 'tdCL':
+                res['upperCircuit'] = td.string.split("/")[0].strip()
+                res['lowerCircuit'] = td.string.split("/")[1].strip()
             elif td['id'] == 'tdWAp':
                 res['weightedAvgPrice'] = td.string.strip()
             elif td['id'] == 'tdTTV':
